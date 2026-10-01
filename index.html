@@ -184,7 +184,8 @@
   .cake-wrap { display: grid; place-items: center; text-align: center; }
   .cake-stage { position: relative; width: min(420px, 100%); margin: 24px auto 0; filter: drop-shadow(0 30px 60px rgba(244,114,182,.25)); }
   .cake-stage svg { width: 100%; height: auto; overflow: visible; }
-  .candle { cursor: pointer; }
+  .candle { cursor: pointer; outline: none; }
+  .candle:focus-visible .flame { filter: drop-shadow(0 0 8px var(--cyan)); }
   .flame { transform-origin: 50% 100%; transform-box: fill-box; animation: flicker .35s ease-in-out infinite alternate; transition: opacity .3s, transform .3s; }
   .flame.off { opacity: 0; transform: scale(0); }
   @keyframes flicker { 0% { transform: scale(1) rotate(-3deg); } 100% { transform: scale(1.1, 1.2) rotate(3deg); } }
