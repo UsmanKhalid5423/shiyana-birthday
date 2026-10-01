@@ -1,9 +1,16 @@
-# Shiyana's birthday site
+# Shiyana's birthday album
 
 Live: https://usmankhalid5423.github.io/shiyana-birthday/
 
-- `index.html` – the whole site (no build step). All personal text lives in the `CONFIG` object at the top of the `<script>` block: name, sender, chips, letter paragraphs, the six reason cards, number of candles.
-- `qr-code.png` – plain black-on-white QR (most reliable to scan).
-- `qr-code-styled.png` – gradient QR with a caption, nicer for printing or sending.
+React + Vite + Framer Motion. Pushing to `main` builds and deploys automatically (GitHub Actions, about 1-2 minutes).
 
-Edit `index.html`, then `git commit` + `git push` – GitHub Pages redeploys in about a minute.
+## Add photos
+1. Put images in `public/photos/` named `01.jpg` ... `12.jpg` (or change the file names in `src/content.js`).
+2. Edit captions, dates, the letter and the timeline in `src/content.js`.
+3. `git add -A && git commit -m "photos" && git push`
+
+## Run locally
+```
+npm install
+npm run dev
+```
